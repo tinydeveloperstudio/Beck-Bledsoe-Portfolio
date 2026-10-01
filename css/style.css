@@ -1,7 +1,120 @@
+body {
+    font-family: Verdana;
+    background-color: #ffffff;
+    color: #f5184b;
+    padding: 10px;
+}
+
+body a {
+    color: #f5184b;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 18px;
+    list-style-type: none;
+    justify-content: right;
+    padding: 10px;
+    grid-column: span 1;
+}
+
+.menu a {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    padding: 4px;
+    font-size: 20px;
+}
+
+header {
+    background-color: #f5184b;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+header h1, header p, header h2{
+    color: #ffffff;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+header h1, header p {
+    grid-column: span 2;
+}
+
 #contact-links {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 18px;
     justify-content: left;
+}
+
+#contact-links a {
+    border: 2px solid #f5184b;
+    text-decoration: none;
+    padding: 4px;
+}
+
+.project-highlight, .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.project-card {
+    grid-column: span 1;
+    border: 2px solid #f5184b;
+    padding: 8px;
+}
+
+.project-card a {
+    border: 2px solid #f5184b;
+    text-decoration: none;
+    padding: 4px;
+}
+
+.featured-project-card {
+    grid-column: span 1;
+    background-color: #f5184b;
+    color: #ffffff;
+    padding: 8px;
+}
+
+.featured-project-card a {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px;
+}
+
+@media (max-width: 1000px) {
+    .project-highlight, .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #contact-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .project-highlight, .projects {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    #contact-links {
+        justify-content: center;
+    }
 }
